@@ -1,0 +1,29 @@
+﻿@using Blog_HHoang.Models
+@model List<Comment>
+<div class="comment-top">
+    <h4>Comments</h4>
+
+    @{
+        foreach (var item in Model)
+        {
+             BlogDbContext db = new BlogDbContext();
+                User user = db.Users.SingleOrDefault(u => u.id_User == item.id_User);
+
+
+            <div class="media">
+
+                <img src="@Url.Content("~/Content/images/" + user.UrlImg)" alt="" class="img-fluid">
+                <div class="media-body">
+                    <h5 class="mt-0">@user.name</h5>
+
+                    <p>
+                        @item.content
+                    </p>
+
+
+                </div>
+            </div>
+                }
+        
+    }
+</div>

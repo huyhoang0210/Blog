@@ -1,0 +1,72 @@
+﻿@using Blog_HHoang.Models
+@model Entry
+@{
+    ViewBag.Title = "detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="banner-inner">
+</div>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index.html">Trang Cá Nhân</a>
+    </li>
+    <li class="breadcrumb-item active">Chi Tiết Bài Viết</li>
+</ol>
+<section class="banner-bottom">
+    <!--/blog-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+                <div class="blog-grid-top">
+                    <div class="b-grid-top">
+                        <div class="blog_info_left_grid">
+                            <a href="single.html">
+                                <img src="@Url.Content("~/Content/images/" + Model.UrlImg)" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="blog-info-middle">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-calendar-alt"></i> @Model.dates
+                                    </a>
+                                </li>
+                                <li class="mx-2">
+                                    <a href="#">
+                                        <i class="far fa-thumbs-up"></i> 201 Likes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="far fa-comment"></i> 15 Comments
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>
+                        <a href="single.html">@Model.Title </a>
+                    </h3>
+                    <p>
+                        @Model.content
+                    </p>
+                </div>
+                @Html.Action("Comment", "Person")
+                 @Html.Action("addComment","Person")
+            </div>
+            <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+                <div class="right-blog-info text-left">
+                    @Html.Partial("partialview")
+                    @Html.Partial("patialAbout2")
+                    @Html.Partial("patialAbout3")
+                    @Html.Action("patialAbout4","Person")
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+

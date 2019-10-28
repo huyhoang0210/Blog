@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="banner-inner">
+</div>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index.html">Trang Chủ</a>
+    </li>
+    <li class="breadcrumb-item active">Giới Thiệu</li>
+</ol>
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Về H BLOG</h3>
+        <div class="row inner-sec">
+            <!--left-->
+            <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+                <div class="blog-grid-top">
+
+                    <div class="blog_info_left_grid">
+                        <a href="single.html">
+                            <img src="~/Content/images/b5.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <h3>
+                        Đôi lời giới thiệu về H BLOG
+                    </h3>
+                    <p>
+                        Chào bạn,
+
+                        Tôi là Huy Hoàng – Sinh viên năm 4 Học Viện KTQS. Tôi đã có hơn 4 năm trên ghế nhà trường . “Hạnh phúc không phải là nhận, hạnh phúc chính là sự cho đi”  bởi vậy tôi chia sẻ với  mọi người về những thứ tôi đã trải qua trong quãng đời SV cùng ôn lại những kỉ niệm về tuổi trẻ.
+
+                        Nội dung Blog dựa theo cảm xúc, quan điểm cá nhân, nó có thể đúng hay sai tùy thời điểm. Bạn nên cân nhắc và tự chịu trách nhiệm khi làm theo. Tôi thích viết những gì tôi đã làm vì thế đây đều là những kinh nghiệm thực tế, rất thiết thực. Nếu bạn thấy hữu ích, hãy tặng Huy Hoàng một tách cà phê.
+
+                        Nếu bạn gặp vướng mắc bạn cần chia sẻ, bạn có thể nhắn tin với tôi thông qua phần bình luận dưới mỗi chủ đề. Hoặc hãy gửi cho tôi một câu hỏi.
+                    </p>
+                    <p>Cảm ơn bạn đã ghé thăm Blog, chúc bạn sẽ tìm thấy những nội dung hữu ích tại đây.</p>
+                </div>
+
+            </div>
+            <!--//left-->
+            <!--right-->
+            <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+                <div class="right-blog-info text-left">
+                    @Html.Partial("partialview")
+                    @Html.Partial("patialAbout2")
+                    @Html.Partial("patialAbout3")
+                    @Html.Action("patialAbout4", "Person")
+                </div>
+            </aside>
+            <!--//right-->
+        </div>
+        </div>
+</section>

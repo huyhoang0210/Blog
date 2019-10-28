@@ -1,0 +1,26 @@
+﻿@using Blog_HHoang.Models
+@model List<Entry>
+<div class="single-gd tech-btm">
+    <h4>Bài viết gần đây</h4>
+    @{
+        foreach (var item in Model)
+        {
+            <div class="blog-grids">
+                <div class="blog-grid-left">
+                    <a href="@Url.Action("detail","Person",new { @ma = item.id_Entry})">
+                        <img src="@Url.Content("~/Content/images/" + item.UrlImg)" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="blog-grid-right">
+
+                    <h5>
+                        <a href="@Url.Action("detail","Person",new { @ma = item.id_Entry})">@item.content1</a>
+                    </h5>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        }
+    }
+</div>
+
+
